@@ -15,6 +15,7 @@
  
  */
 #include <SoftwareSerial.h>
+#include <Keyboard.h>
 
 SoftwareSerial mySerial(9, 10); // RX, TX
 
