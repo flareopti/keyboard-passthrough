@@ -148,11 +148,11 @@ def main():
                         press = 1 if value == 1 else 0
                         print(f"{'Pressed' if press else 'Released'} {code} -> {keycode}")
                         ser.write(pack("!BB", press, keycode))
-                # Exit hotkey: Ctrl+End
-                if ecodes.KEY_END in pressed_keys and (
+                # Exit hotkey: Ctrl+Delete
+                if ecodes.KEY_DELETE in pressed_keys and (
                     ecodes.KEY_LEFTCTRL in pressed_keys or ecodes.KEY_RIGHTCTRL in pressed_keys
                 ):
-                    print("Ctrl+End pressed — exiting.")
+                    print("Ctrl+Delete pressed — exiting.")
                     break
     finally:
         dev.ungrab()
